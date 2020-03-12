@@ -1,8 +1,14 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import HeaderComponent from './components/header'
+import "./assets/css/app.css"
 
 class App extends React.Component{
+  constructor(){
+    super(){
+      
+    }
+  }
   componentDidMount(){
     console.log(this.refs.goods)
     let header = ReactDOM.findDOMNode(document.getElementById('header'))
@@ -19,6 +25,7 @@ class App extends React.Component{
         {name}
         <div dangerouslySetInnerHTML={{__html:content}}></div>
         <div ref="goods">潮流女装</div>
+        <div className="box"></div>
       </div>
     )
   }
